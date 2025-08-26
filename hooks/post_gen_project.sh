@@ -1,5 +1,9 @@
 #!bin/bash
+
+echo "$(pwd)"
+
 cd Demo
+echo "$(pwd)"
 cat > "project.yml"<<EOF
 name: {{cookiecutter.project_name}}Demo
 options:

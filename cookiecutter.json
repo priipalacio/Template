@@ -1,8 +1,7 @@
 {
     "module_name": "Project name",
     "repository_name": "uala-project-name-ios",
-    "bundle_identifier": "com.uala.{{ cookiecutter.project_name}}Demo",
+    "bundle_identifier": "com.uala.{{ cookiecutter.module_name}}Demo",
     "dev_name": "Priscila Palacio",
-    "creation_year": "2025",
-    "company_name": "uala"
+    "creation_year": "2025"
 }

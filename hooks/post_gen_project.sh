@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "$(pwd)"
+cd Demo
 
 cat > "project.yml"<<EOF
 name: {{cookiecutter.module_name}}Demo

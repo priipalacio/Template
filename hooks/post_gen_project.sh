@@ -55,6 +55,8 @@ else
   exit 1
 fi
 
+rm Template.xcodeproj
+
 cd ../..
 ORIGEN="{{cookiecutter.module_name}}Template"
 
@@ -63,7 +65,5 @@ ORIGEN="{{cookiecutter.module_name}}Template"
   mv -f "$ORIGEN"/* ./
 )
 
-# Eliminar origen si quedó vacío
-if [ -z "$(ls -A ./ 2>/dev/null)" ]; then
-  rmdir "$ORIGEN"
-fi
+# Eliminar origen
+rmdir "$ORIGEN"

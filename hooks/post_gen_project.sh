@@ -54,3 +54,16 @@ else
   echo "⚠️ XcodeGen no está instalado. Instalalo con: brew install xcodegen"
   exit 1
 fi
+
+cd ../..
+ORIGEN="{{cookiecutter.module_name}}Template"
+
+(
+  shopt -s dotglob nullglob
+  mv -f "$ORIGEN"/* ./
+)
+
+# Eliminar origen si quedó vacío
+if [ -z "$(ls -A ./ 2>/dev/null)" ]; then
+  rmdir "$ORIGEN"
+fi
